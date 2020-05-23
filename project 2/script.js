@@ -1,14 +1,25 @@
 'use strict';
 
-let money = +prompt("Ваш бюджет на месяц?"),
+let money, time;
+
+function start () {
+    money = +prompt("Ваш бюджет на месяц?");
     time = prompt("Введите дату в формате YYYY-MM-DD");
+
+    while (isNaN(money) || money == "" || money == null) {
+        money = +prompt("Ваш бюджет на месяц?");
+    }
+}
+
+
+start();
 
 
 let appData = {
     budget : money,
     timeData: time,
     income: [],
-    savings: false,
+    savings: true,
     expenses: {},
     optionalExpenses: {}
 };
@@ -21,6 +32,8 @@ let budgetOneDay = money/30;
 
 
 // 1st example of cycle
+
+function chooseExpenses() {
 
 for (let i = 0; i < 2; i++) {
     let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
@@ -35,6 +48,12 @@ for (let i = 0; i < 2; i++) {
         i = 0;
     }
 }
+
+}
+
+// chooseExpenses();
+
+
 
 
 
@@ -79,7 +98,7 @@ function calcBudget (income) {
 }
 
 // передаем в функцию введенные данные по доходу за месяц
-appData.moneyPerDay = calcBudget(appData.budget); 
+appData.moneyPerDay = calcBudget(appData.budget).toFixed(); 
 
 
 function calcLevel (income) {
@@ -127,3 +146,18 @@ for (let i = 0; i < 3; i++) {
 return optionalExpenses;
 
 }
+
+
+
+
+function checkSavings() {
+    if (appData.savings == true) {
+        let save = +prompt("Какова сумма накоплений?"),
+            percent = +prompt("Под какой процент?");
+
+            appData.monthIncome = save/100/12*percent;
+            alert("Доход в месяц с Вашего депозита: " + appData.monthIncome);
+    }
+}
+
+checkSavings();
