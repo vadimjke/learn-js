@@ -22,10 +22,10 @@ let person = {
     isMarried: false
 };
 
-console.log(person["name"]);
+console.log(name.person);
 
 let arr = ['plum.png', 'orange.jpg', 'apple.bmp'];
 
 console.log(arr[0]);
 
-let ans = +prompt("yo", "");
+// let ans = +prompt("yo", "");
