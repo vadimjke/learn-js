@@ -20,3 +20,24 @@ console.log(alex);
 
 ivan.hello();
 alex.hello();
+
+
+
+// Классы
+
+class Rectangle {
+    constructor(height = 20, width = 20) {
+        this.height = height;
+        this.width = width;
+    }
+    calcArea() {
+        return this.height * this.width;
+    }
+}
+
+// const square = new Rectangle(10, 10);
+const squareTwo = new Rectangle();
+console.log (squareTwo.calcArea());
+
+
+
