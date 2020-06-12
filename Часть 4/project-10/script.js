@@ -33,7 +33,7 @@ console.log(user.userAge);
 user.say();
 console.log(user.getAge());
 
-user.setAge(3);
+user.setAge(120);
 console.log(user.getAge());
 
 // user.age = 30;
