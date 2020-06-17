@@ -45,7 +45,7 @@
     
 // Таймер
 
-    let deadline = '2020-06-16';
+    let deadline = '2020-06-19';
 
     function getTimeRemaining(endTime) {
         let t = Date.parse(endTime) - Date.parse(new Date()),
