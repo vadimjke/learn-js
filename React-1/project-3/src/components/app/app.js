@@ -10,9 +10,9 @@ import './app.css';
 const App = () => {
 
     const data = [
-        { label: 'First', important: false },
-        { label: 'Second', important: true },
-        { label: 'Third', important: false }
+        { label: 'First', important: false, id: 1 },
+        { label: 'Second', important: true, id: 2 },
+        { label: 'Third', important: false, id: 3 }
     ];
 
 
